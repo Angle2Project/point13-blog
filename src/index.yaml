@@ -1,0 +1,7 @@
+ProjectTitle: 'point-13 blogs'
+
+PageList:
+- file: list.html
+  ready: 75
+- file: article.html
+  ready: 10

@@ -1,0 +1,130 @@
+---
+title: Index page,
+name: list
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	<div class="wrapper">
+    <h1>OUR BLOG</h1>
+
+    <!-- Tabs buttons -->
+    <ul class="list__tabs-head">
+      <li class="current" data-href="all">
+        <span>ALL</span>
+      </li>
+      <li data-href="culture">
+        <span>CULTURE</span>
+      </li>
+      <li data-href="news">
+        <span>NEWS</span>
+      </li>
+      <li data-href="work">
+        <span>WORK</span>
+      </li>
+      <li data-href="events">
+        <span>EVENTS</span>
+      </li>
+    </ul>
+    <!-- /Tabs buttons -->
+
+    
+    
+    {% for i in [
+      'all',
+      'culture',
+      'news',
+      'work',
+      'events'
+    ] %}
+
+    <div class="list__tabs-body{% if loop.index==1 %} current{%endif%}" data-target="{{i}}">
+      <!-- Tabs item -->      
+      <section class="tabs-item">
+        <div class="tabs-item__info">
+          <span>work</span>
+          <span>17.01.2019</span>          
+        </div>
+        <h2>ON POINT CHOISE FOR Recruitment Advertising</h2>
+        <div class="layout__arrow">
+          <i></i>
+        </div>
+      </section>
+      <!-- /Tabs item -->
+      <!-- Tabs item -->
+      <section class="tabs-item">
+        <div class="tabs-item__info">
+          <span>CULTURE</span>
+          <span>12.01.2019</span>          
+        </div>
+        <h2>service and care</h2>
+        <div class="tabs-item__photo" style="background-image: url('./img/blog-img-1.jpg');"></div>
+        <div class="layout__arrow">
+          <i></i>
+        </div>
+      </section>
+      <!-- /Tabs item -->
+      <!-- Tabs item -->
+      <section class="tabs-item">
+        <div class="tabs-item__info">
+          <span>EVENTS</span>
+          <span>17.01.2019</span>          
+        </div>
+        <h2>POINT13MEDIA ON DIGITAL DESIGN DAYS</h2>
+        <div class="tabs-item__photo" style="background-image: url('./img/blog-img-2.jpg');"></div>
+        <div class="layout__arrow">
+          <i></i>
+        </div>
+      </section>
+      <!-- /Tabs item -->
+      <!-- Tabs item -->
+      <section class="tabs-item">
+        <div class="tabs-item__info">
+          <span>WORK</span>
+          <span>21.01.2019</span>          
+        </div>
+        <h2>ON POINT CHOISE FOR Recruitment</h2>
+        <div class="tabs-item__photo" style="background-image: url('./img/blog-img-3.jpg');"></div>
+        <div class="layout__arrow">
+          <i></i>
+        </div>
+      </section>
+      <!-- /Tabs item -->
+      <!-- Tabs item -->
+      <section class="tabs-item">
+        <div class="tabs-item__info">
+          <span>CULTURE</span>
+          <span>27.02.2019</span>          
+        </div>
+        <h2>service and care</h2>
+        <div class="tabs-item__photo" style="background-image: url('./img/blog-img-4.jpg');"></div>
+        <div class="layout__arrow">
+          <i></i>
+        </div>
+      </section>
+      <!-- /Tabs item -->
+      <!-- Tabs item -->
+      <section class="tabs-item">
+        <div class="tabs-item__info">
+          <span>EVENTS</span>
+          <span>01.03.2019</span>          
+        </div>
+        <h2>POINT13MEDIA ON DIGITAL DESIGN DAYS</h2>        
+        <div class="layout__arrow">
+          <i></i>
+        </div>
+      </section>
+      <!-- /Tabs item -->
+    </div>
+
+    {% endfor %}
+
+    <div class="list__tabs_loader">
+      <i class="point-1"></i>
+      <i class="point-2"></i>
+      <i class="point-3"></i>
+    </div>
+
+
+  </div>
+{% endblock %}

@@ -1,0 +1,76 @@
+{% import "partials/_mixins.html" as mixins %}
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#fff"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" media="all" href="css/app.css"/>
+    {# {% include "../partials/_media-tags.html" %} #}
+  </head>
+  <body class="loaded">
+
+    <div class="loader">
+      <img src="./img/logo_point13.svg" alt="">
+    </div>
+    
+    <div class="menu-but">
+      <span class="long"></span>
+      <span class="short"></span>
+    </div>
+
+    {% if name == 'article' %}
+    <div class="back-but">
+      <a href="">ALL POSTS</a>
+    </div>
+    {% endif %}
+
+    <div class="top-logo">
+      <a href="">
+        <img src="./img/logo_point13.svg" alt="">
+      </a>
+    </div>
+
+    <div class="getintoush-but">
+      <span class="text">GET IN TOUCH</span>
+      <span class="circle"></span>
+    </div>
+
+    <div class="layout__arrow">
+      <i></i>
+    </div>
+
+    <div class="layout__socials">
+      <a href="#">IN</a>
+      <a href="#">FB</a>
+      <a href="#">LI</a>
+    </div>
+
+    <!-- BEGIN content -->
+    <main class="{{name}}">
+      {% block content %}{% endblock %}
+    </main>
+    <!-- END content -->
+
+    <footer>
+      <div class="wrapper">
+        <div class="copyright">© POINT13MEDIA. All rights reserved 2019</div>
+        <a href="https://angle2.agency/" target="_blank" class="footer__logo">
+          <span>by</span>
+          <img src="./img/angle2.svg" alt="">
+        </a>
+      </div>
+    </footer>
+
+    <!-- BEGIN scripts -->    
+    <script type="text/javascript" src="js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="js/lib/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/lib/SplitText.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+
+  </body>
+</html>
